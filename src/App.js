@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import './App.css';
-const tg = window.Telegram.WebApp;
+
 
 function App() {
-
+  
+  const tg = window.Telegram.WebApp;
   useEffect(()=>{
     tg.ready();
   },[])
