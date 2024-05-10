@@ -1,9 +1,14 @@
 import { useEffect } from 'react';
 import './App.css';
+import { useTelegram } from './components/hooks/useTelegram';
 
-const tg = window.Telegram.WebApp;
 function App() {
   
+  const {
+    onToggelButton, tg
+} = useTelegram();
+
+
   useEffect(()=>{
     tg.ready();
   },[])
@@ -12,6 +17,9 @@ function App() {
 
   return (
     <div className="App">
+      <button onClick={onToggelButton}>
+        toggle
+      </button>
     </div>
   );
 }
