@@ -1,17 +1,16 @@
 import {useEffect } from 'react';
-import { useTelegram } from './components/hooks/useTelegram';
 import Header from './components/header/Header';
 
+import { useTelegram } from './components/hooks/useTelegram';
 import './App.css';
 
 function App() {
 
   const { onToggelButton, tg } = useTelegram();
-  
 
   useEffect(()=>{
     tg.ready();
-  },[])
+  }, [])
 
 
 
